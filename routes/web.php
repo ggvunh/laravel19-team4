@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('hotels.index');
+});
+
+Route::get('/login', function () {
+    return view('hotels.login');
+});
+
+Route::get('/admin', function(){
+	return view('admin.admin');
+});
+
+Route::get('/booking', function(){
+	return view('hotels.booking');
 });

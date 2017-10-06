@@ -46,6 +46,7 @@
   			</div>
   		</div>	  	
   	</div>
+
 	@yield('content')
 
 	<footer class="tm-black-bg">

@@ -37,7 +37,7 @@
 	  				<nav class="tm-nav">
 						<ul>
 							<li><a href="{{ '/' }}" class="active">Home</a></li>
-							<li><a href="tours.html">Our Rooms</a></li>
+							<li><a href="#">Our Rooms</a></li>
 							<li><a href="{{ 'booking' }}">Booking</a></li>
 							<li><a href="{{ 'login' }}">Login</a></li>
 						</ul>

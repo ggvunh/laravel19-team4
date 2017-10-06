@@ -20,7 +20,7 @@ Route::get('/login', function () {
 });
 
 Route::get('/admin', function(){
-	return view('admin.admin');
+	return view('layouts.admin.admin');
 });
 
 Route::get('/booking', function(){

@@ -124,7 +124,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        
+        <li>@yield('menu')</li>
     </section>
     <!-- /.sidebar -->
   </aside>
@@ -141,6 +141,8 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
+      <br><br><br>
+      @yield('content')
     </section>
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->

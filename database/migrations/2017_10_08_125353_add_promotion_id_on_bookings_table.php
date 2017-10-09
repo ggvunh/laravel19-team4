@@ -27,6 +27,7 @@ class AddPromotionIdOnBookingsTable extends Migration
     public function down()
     {
         Schema::table('bookings', function (Blueprint $table) {
+            $table->dropForeign('bookings_promotion_id_foreign');
             $table->dropColumn('promotion_id');
         });
     }

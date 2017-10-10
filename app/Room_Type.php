@@ -8,8 +8,8 @@ class Room_Type extends Model
 {
     protected $fillable = ['id','name'];
 
-    public function rooms()
+    public function room()
     {
-    	return $this->hasMany('App\Room');
+    	return $this->belongsTo('App\Room');
     }
 }

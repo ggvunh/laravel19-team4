@@ -8,8 +8,8 @@ class Room_Image extends Model
 {
     protected $fillable = ['id','url','room_id'];
 
-    public function rooms()
+    public function room()
     {
-    	return $this->hasMany('App\Room');
+    	return $this->belongsTo('App\Room');
     }
 }

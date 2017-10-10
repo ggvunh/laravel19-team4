@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Input;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +26,12 @@ Route::get('/admin', function(){
 Route::get('/booking', function(){
 	return view('hotels.booking');
 });
+Route::get('/', 'PromotionController@home');
+Route::get('admin/promotion/index', 'PromotionController@getpromotion');
+Route::post('admin/promotion/index', 'PromotionController@view');
+Route::get('admin/promotion/create', 'PromotionController@create');
+Route::get('admin/promotion/{promotion}', 'PromotionController@show');
+Route::get('admin/promotion/{promotion}/delete', 'PromotionController@delete');
+Route::post('admin/promotion', 'PromotionController@save');
+Route::get('admin/promotion/{id}/edit', 'PromotionController@edit');
+Route::put('admin/promotion/{id}', 'PromotionController@update');

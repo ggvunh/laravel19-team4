@@ -4,30 +4,29 @@
 	<meta charset="UTF-8">
   	<title>Hotel</title>
   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
-  	<link href="css/font-awesome.min.css" rel="stylesheet">
-  	<link href="css/bootstrap.min.css" rel="stylesheet">
-  	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-  	<link href="css/flexslider.css" rel="stylesheet">
-  	<link href="css/templatemo-style.css" rel="stylesheet">
-  	<link href="css/login.css" rel="stylesheet">
-  	<link href="css/bookingform/normalize.css.css" rel="stylesheet">
-  	<link href="css/bookingform/main.css" rel="stylesheet">
-  	<link href="css/booking.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  	<script type="text/javascript" src="js/moment.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-   	<script type="text/javascript" src="js/templatemo-script.js"></script>
-   	<script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
-		<link  href = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css "  rel = " stylesheet " >
-		<script  src = " //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js " > </script>
-		<script  src = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js " > </script>
-		{!! Toastr :: render () !!}
+  	<link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
+  	<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+  	<link href="{{asset('css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet">
+  	<link href="{{asset('css/flexslider.css')}}" rel="stylesheet">
+  	<link href="{{asset('css/templatemo-style.css')}}" rel="stylesheet">
+  	<link href="{{asset('css/login.css')}}" rel="stylesheet">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{asset('js/jquery-1.11.2.min.js')}}"></script>
+  	<script type="text/javascript" src="{{asset('js/moment.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/bootstrap-datetimepicker.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/jquery.flexslider-min.js')}}"></script>
+   	<script type="text/javascript" src="{{asset('js/templatemo-script.js')}}"></script>
+   	<script type="text/javascript" src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
+	<link  href = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css "  rel = " stylesheet " >
+	<script  src = " //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js " > </script>
+	<script  src = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js " > </script>
 
 </head>
 <body class="tm-gray-bg">
-
+	{!! Toastr :: render () !!}
   	<div class="tm-header">
   		<div class="container">
   			<div class="row">
@@ -40,10 +39,10 @@
 		            </div>
 	  				<nav class="tm-nav">
 						<ul>
-							<li><a href="{{ '/' }}" class="active">Home</a></li>
-							<li><a href="#">Our Rooms</a></li>
-							<li><a href="{{ 'booking' }}">Booking</a></li>
-							<li><a href="{{ 'login' }}">Login</a></li>
+							<li><a href="{{ url('/')}}" class="active">Home</a></li>
+							<li><a href="{{ url('search') }}">Search</a></li>
+							<li><a href="{{ url('booking') }}">Booking</a></li>
+							<li><a href="{{ url('login') }}">Login</a></li>
 						</ul>
 					</nav>
 	  			</div>
@@ -62,6 +61,5 @@
 			</div>
 		</div>
 	</footer>
-
 </body>
 </html>

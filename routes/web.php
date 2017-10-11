@@ -26,3 +26,11 @@ Route::get('/admin', function(){
 Route::get('/booking', function(){
 	return view('hotels.booking');
 });
+
+Route::get('/search', function(){
+	return view('hotels.search');
+});
+
+Route::get('/allrooms', 'RoomController@getRooms');
+Route::get('/rooms/{room}', 'RoomController@showRoom');
+Route::get('/searchresult','RoomController@searchRooms');

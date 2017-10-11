@@ -141,7 +141,7 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
-      <br><br><br>
+      <br>
       @yield('content')
     </section>
   <!-- Add the sidebar's background. This div must be placed

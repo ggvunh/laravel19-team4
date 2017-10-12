@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Http\Request;
+use Toastr;
 class LoginController extends Controller
 {
     /*
@@ -25,15 +26,27 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+     public function __construct()
+     {
+         $this->middleware('guest', ['except' => 'logout']);
+     }
+     protected function authenticated(Request $request, $user)
+
     {
-        $this->middleware('guest')->except('logout');
+
+        if ( $user->role==1 ) {// do your margic here
+            Toastr::success('Bạn đã đăng nhập thành công', $title = null, $options = []);
+            return redirect()->route('admin');
+        }
+            Toastr::success('Bạn đã đăng nhập thành công', $title = null, $options = []);
+            return redirect('admin');
     }
+
 }

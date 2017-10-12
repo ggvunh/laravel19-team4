@@ -15,14 +15,12 @@ Route::get('/', function () {
     return view('hotels.index');
 });
 
-Route::get('/login', function () {
-    return view('hotels.login');
-});
-
-Route::get('/admin', function(){
-	return view('admin.index');
-});
+Route::get('/admin', 'PageController@getAdmin')->name('admin');
 
 Route::get('/booking', function(){
 	return view('hotels.booking');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -63,7 +63,18 @@ body { overflow-x: hidden; }
 	background: #FCDD44;
 	color: #000;
 }
-
+#room-box {
+	background-color: #f5d11d;
+	height: 88px;
+	margin-right: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0;
+	font-weight: 600;
+}
 /* Banner */
 .tm-banner-inner {
     height: auto;
@@ -656,6 +667,20 @@ hr { border-top: 1px solid #111010; }
     margin-right: 10px;
 }
 .contact-social .tm-social-icon:last-child { margin-right: 0; }
+
+.detail {
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+
+.detail h4 {
+	padding-left:80px;
+}
+
+.detail h1{
+	margin: left;
+	color: brown;
+}
 
 @media screen and (max-width: 1199px) {
 	.tm-banner-title { font-size: 50px; }

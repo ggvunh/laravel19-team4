@@ -37,40 +37,13 @@ Route::post('admin/promotion', 'PromotionController@save')->name('admin.promotio
 Route::get('admin/promotion/{promotion}/edit', 'PromotionController@edit')->name('admin.promotion.edit');
 Route::put('admin/promotion/{promotion}', 'PromotionController@update')->name('admin.promotion.update');
 
+Route::get('/search', function(){
+	return view('hotels.search');
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::get('/allrooms', 'RoomController@getRooms');
+Route::get('/rooms/{room}', 'RoomController@showRoom');
+Route::get('/searchresult','RoomController@searchRooms');
 
 //Route Service
 Route::get('admin/services', 'ServiceController@home');
@@ -82,7 +55,6 @@ Route::get('admin/services/{id}/delete', 'ServiceController@delete')->name('admi
 Route::post('admin/service', 'ServiceController@save')->name('admin.service');
 Route::get('admin/services/{service}/edit', 'ServiceController@edit')->name('admin.services.edit');
 Route::put('admin/services/{service}', 'ServiceController@update')->name('admin.services.update');
-
 
 //Route ManagerBooking
 Route::get('admin/managerbooking', 'BookingmanagerController@home');

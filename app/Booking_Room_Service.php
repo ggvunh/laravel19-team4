@@ -10,11 +10,11 @@ class Boongking_Room_Service extends Model
 
 	public function booking_room()
 	{
-		return $this->belongsTo('app\Booking_Room');
+		return $this->belongsTo('App\Booking_Room');
 	}
 
 	public function service()
 	{
-		return $this->belongsTo('app\Service');
+		return $this->belongsTo('App\Service');
 	}
 }

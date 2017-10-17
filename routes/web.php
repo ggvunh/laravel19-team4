@@ -82,3 +82,9 @@ Route::get('admin/services/{id}/delete', 'ServiceController@delete')->name('admi
 Route::post('admin/service', 'ServiceController@save')->name('admin.service');
 Route::get('admin/services/{service}/edit', 'ServiceController@edit')->name('admin.services.edit');
 Route::put('admin/services/{service}', 'ServiceController@update')->name('admin.services.update');
+
+
+//Route ManagerBooking
+Route::get('admin/managerbooking', 'BookingmanagerController@home');
+Route::get('admin/managerbooking/index', 'BookingmanagerController@getBooking')->name('admin.managerbooking.index');
+Route::get('admin/managerbooking/{id}', 'BookingmanagerController@show')->name('admin.managerbooking.show');

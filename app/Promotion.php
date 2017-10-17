@@ -10,6 +10,6 @@ class Promotion extends Model
 
 	public function booking_room()
 	{
-		return $this->hasMany('app\Booking');
+		return $this->hasMany('App\Booking');
 	}
 }

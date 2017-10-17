@@ -20,8 +20,7 @@
 	<script type="text/javascript" src="{{asset('js/jquery.flexslider-min.js')}}"></script>
    	<script type="text/javascript" src="{{asset('js/templatemo-script.js')}}"></script>
    	<script type="text/javascript" src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
-	<link  href = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css "  rel = " stylesheet " >
-	<script  src = " //cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js " > </script>
+	<link  href = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"  rel =" stylesheet" >
 	<script  src = " //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js " > </script>
 
 </head>

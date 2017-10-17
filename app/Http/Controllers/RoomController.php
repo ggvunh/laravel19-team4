@@ -29,13 +29,11 @@ class RoomController extends Controller
         if($data['keyword'] != '')
         {
         	$rooms = Room::where('name', 'like', '%'.$search->keyword.'%')
-        				->paginate(4);
-    					/**
-    					->whereHas('room_types', function($query)
+    					->orwhereHas('room_type',function($query) use($search)
     					{
     						$query->where('name','like','%'.$search->keyword.'%');
     					})->paginate(4);
-    					**/		
+    						
         	return view('rooms.search_result',compact('rooms','search'));
         }
         else

@@ -15,16 +15,16 @@
 		    </li>
 		    <li>
 			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Lorem <span class="tm-yellow-text">Ipsum</span> Dolor</h1>
-					<p class="tm-banner-subtitle">Wonderful Destinations</p>
+					<h1 class="tm-banner-title"><span class="tm-yellow-text">The Best</span> Place</h1>
+					<p class="tm-banner-subtitle">For Your Holidays</p>
 					<a href="#more" class="tm-banner-link">Learn More</a>	
 				</div>
 		      <img src="img/banner-2.jpg" alt="Image" />
 		    </li>
 		    <li>
 			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title">Proin <span class="tm-yellow-text">Gravida</span> Nibhvell</h1>
-					<p class="tm-banner-subtitle">Velit Auctor</p>
+					<h1 class="tm-banner-title"><span class="tm-yellow-text">The Best</span> Place</h1>
+					<p class="tm-banner-subtitle">For Your Holidays</p>
 					<a href="#more" class="tm-banner-link">Learn More</a>	
 				</div>
 		      <img src="img/banner-3.jpg" alt="Image" />
@@ -39,13 +39,8 @@
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<!-- Nav tabs -->
 				<div class="tm-home-box-1">
-					<ul class="nav nav-tabs tm-white-bg" role="tablist" id="hotelCarTabs">
-					    <li role="presentation" class="active">
-					    	<a href="#hotel" aria-controls="hotel" role="tab" data-toggle="tab">Room</a>
-					    </li>
-					    <li role="presentation">
-					    	<a href="#car" aria-controls="car" role="tab" data-toggle="tab">Car Rental</a>
-					    </li>
+					<ul class="nav nav-tabs tm-white-bg" role="tablist">
+					    <div id="room-box"><h2>Search Rooms</h1></div>
 					</ul>
 
 					<!-- Tab panes -->
@@ -54,15 +49,7 @@
 					    	<div class="tm-search-box effect2">
 								<form action="#" method="post" class="hotel-search-form">
 									<div class="tm-form-inner">
-										<div class="form-group">
-							            	 <select class="form-control">
-							            	 	<option value="">-- Select Room -- </option>
-							            	 	<option value="shangrila">Shangri-La</option>
-												<option value="chatrium">Chatrium</option>
-												<option value="fourseasons">Four Seasons</option>
-												<option value="hilton">Hilton</option>
-											</select> 
-							          	</div>
+
 							          	<div class="form-group">
 							                <div class='input-group date' id='datetimepicker1'>
 							                    <input type='text' class="form-control" placeholder="Check-in Date" />

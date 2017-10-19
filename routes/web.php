@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Input;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +16,6 @@ Route::get('/', function () {
     return view('hotels.index');
 });
 
-Route::get('/login', function () {
-    return view('hotels.login');
-});
 
 Route::get('/admin', function(){
 	return view('admin.index');
@@ -60,3 +58,10 @@ Route::put('admin/services/{service}', 'ServiceController@update')->name('admin.
 Route::get('admin/managerbooking', 'BookingmanagerController@home');
 Route::get('admin/managerbooking/index', 'BookingmanagerController@getBooking')->name('admin.managerbooking.index');
 Route::get('admin/managerbooking/{id}', 'BookingmanagerController@show')->name('admin.managerbooking.show');
+
+Route::get('/admin', 'PageController@getAdmin')->name('admin');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('admin/search','RoomController@searchDate');

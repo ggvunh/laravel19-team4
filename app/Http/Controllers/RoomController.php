@@ -33,7 +33,7 @@ class RoomController extends Controller
     					{
     						$query->where('name','like','%'.$search->keyword.'%');
     					})->paginate(4);
-    						
+
         	return view('rooms.search_result',compact('rooms','search'));
         }
         else
@@ -41,5 +41,8 @@ class RoomController extends Controller
             return redirect('/search');
         }
     }
-
+    public function searchDate()
+    {
+        return view('admin.search.booking_date');
+    }
 }

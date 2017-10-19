@@ -21,9 +21,20 @@ Route::get('/admin', function(){
 	return view('admin.index');
 });
 
-Route::get('/booking', function(){
-	return view('hotels.booking');
+//Route Booking
+Route::get('/available/rooms/{room}','BookingController@getRooms');
+Route::get('/availablerooms','BookingController@searchRooms');
+
+//Route Room
+Route::get('/search', function(){
+	return view('hotels.search');
 });
+
+Route::get('/allrooms', 'RoomController@getRooms');
+Route::get('/rooms/{room}', 'RoomController@showRoom');
+Route::get('/searchresult','RoomController@searchRooms');
+
+
 //Route Promotion
 Route::get('admin/promotion', 'PromotionController@home');
 Route::get('admin/promotion/index', 'PromotionController@getpromotion')->name('admin.promotion.index');
@@ -35,13 +46,6 @@ Route::post('admin/promotion', 'PromotionController@save')->name('admin.promotio
 Route::get('admin/promotion/{promotion}/edit', 'PromotionController@edit')->name('admin.promotion.edit');
 Route::put('admin/promotion/{promotion}', 'PromotionController@update')->name('admin.promotion.update');
 
-Route::get('/search', function(){
-	return view('hotels.search');
-});
-
-Route::get('/allrooms', 'RoomController@getRooms');
-Route::get('/rooms/{room}', 'RoomController@showRoom');
-Route::get('/searchresult','RoomController@searchRooms');
 
 //Route Service
 Route::get('admin/services', 'ServiceController@home');

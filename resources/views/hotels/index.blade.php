@@ -36,6 +36,7 @@
 	<!-- gray bg -->	
 	<section class="container tm-home-section-1" id="more">
 		<div class="row">
+			<form action="{!! ('availablerooms') !!}" method="get">
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<!-- Nav tabs -->
 				<div class="tm-home-box-1">
@@ -49,10 +50,9 @@
 					    	<div class="tm-search-box effect2">
 								<form action="#" method="post" class="hotel-search-form">
 									<div class="tm-form-inner">
-
 							          	<div class="form-group">
 							                <div class='input-group date' id='datetimepicker1'>
-							                    <input type='text' class="form-control" placeholder="Check-in Date" />
+							                    <input type='text' name= "checkin" class="form-control" placeholder="Check-in Date"/>
 							                    <span class="input-group-addon">
 							                        <span class="fa fa-calendar"></span>
 							                    </span>
@@ -60,14 +60,14 @@
 							            </div>
 							          	<div class="form-group">
 							                <div class='input-group date' id='datetimepicker2'>
-							                    <input type='text' class="form-control" placeholder="Check-out Date" />
+							                    <input type='text' name= "checkout" class="form-control" placeholder="Check-out Date" />
 							                    <span class="input-group-addon">
 							                        <span class="fa fa-calendar"></span>
 							                    </span>
 							                </div>
 							            </div>
 							            <div class="form-group margin-bottom-0">
-							                <select class="form-control">
+							                <select class="form-control" name="guest">
 							            	 	<option value="">-- Guests -- </option>
 							            	 	<option value="1">1</option>
 												<option value="2">2</option>
@@ -130,6 +130,7 @@
 					</div>
 				</div>								
 			</div>
+			</form>
 
 			<div class="col-lg-4 col-md-4 col-sm-6">
 				<div class="tm-home-box-1 tm-home-box-1-2 tm-home-box-1-center">

@@ -16,9 +16,6 @@
         				<h4>Status: {{$room->status}}<br></h4>
         				<h4>Room Type: {{$room->room_type->name}}<br></h4>	
     				</td>
-    				<td>
-    					
-    				</td>
 				</tr>
 				</table>
 				</div>

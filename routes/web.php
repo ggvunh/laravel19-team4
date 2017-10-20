@@ -46,6 +46,14 @@ Route::post('admin/promotion', 'PromotionController@save')->name('admin.promotio
 Route::get('admin/promotion/{promotion}/edit', 'PromotionController@edit')->name('admin.promotion.edit');
 Route::put('admin/promotion/{promotion}', 'PromotionController@update')->name('admin.promotion.update');
 
+//Route CRUD room
+
+Route::get('admin/room', 'RoomController@home');
+Route::get('admin/room/index', 'RoomController@listroom');
+Route::get('admin/room/{id}', 'RoomController@showdetailroom');
+Route::get('admin/room/create', 'RoomController@create');
+Route::get('admin/room/{room}/edit', 'RoomController@create');
+
 
 //Route Service
 Route::get('admin/services', 'ServiceController@home');

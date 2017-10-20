@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Room_Type extends Model
+class People extends Model
 {
-	protected $table = 'room_types';
+    protected $table = 'people';
     protected $fillable = ['id','name'];
 
     public function rooms()
     {
-    	return $this->hasMany('App\Room', 'room_type_id', 'id');
+    	return $this->hasMany('App\Room', 'mount_people_id', 'id');
     }
 }

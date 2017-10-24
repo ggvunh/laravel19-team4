@@ -12,7 +12,7 @@ class RoomController extends Controller
 {
     public function getRooms()
     {
-    	$rooms = Room::paginate(4);
+    	$rooms = Room::all();
     	return view('rooms.list_all_room', compact('rooms'));
     }
 

@@ -1,453 +1,125 @@
 @extends('layouts.master')
 
 @section('content')
-	<section class="tm-banner">
-		<!-- Flexslider -->
-		<div class="flexslider flexslider-banner">
-		  <ul class="slides">
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title"><span class="tm-yellow-text">The Best</span> Place</h1>
-					<p class="tm-banner-subtitle">For Your Holidays</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>	
-				</div>
-				<img src="img/banner-1.jpg" alt="Image" />	
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title"><span class="tm-yellow-text">The Best</span> Place</h1>
-					<p class="tm-banner-subtitle">For Your Holidays</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>	
-				</div>
-		      <img src="img/banner-2.jpg" alt="Image" />
-		    </li>
-		    <li>
-			    <div class="tm-banner-inner">
-					<h1 class="tm-banner-title"><span class="tm-yellow-text">The Best</span> Place</h1>
-					<p class="tm-banner-subtitle">For Your Holidays</p>
-					<a href="#more" class="tm-banner-link">Learn More</a>	
-				</div>
-		      <img src="img/banner-3.jpg" alt="Image" />
-		    </li>
-		  </ul>
-		</div>	
-	</section>
-
-	<!-- gray bg -->	
-	<section class="container tm-home-section-1" id="more">
-		<div class="row">
-			<form action="{!! ('availablerooms') !!}" method="get">
-			<div class="col-lg-4 col-md-4 col-sm-6">
-				<!-- Nav tabs -->
-				<div class="tm-home-box-1">
-					<ul class="nav nav-tabs tm-white-bg" role="tablist">
-					    <div id="room-box"><h2>Search Rooms</h1></div>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-					    <div role="tabpanel" class="tab-pane fade in active tm-white-bg" id="hotel">
-					    	<div class="tm-search-box effect2">
-								<form action="#" method="post" class="hotel-search-form">
-									<div class="tm-form-inner">
-							          	<div class="form-group">
-							                <div class='input-group date' id='datetimepicker1'>
-							                    <input type='text' name= "checkin" class="form-control" placeholder="Check-in Date"/>
-							                    <span class="input-group-addon">
-							                        <span class="fa fa-calendar"></span>
-							                    </span>
-							                </div>
-							            </div>
-							          	<div class="form-group">
-							                <div class='input-group date' id='datetimepicker2'>
-							                    <input type='text' name= "checkout" class="form-control" placeholder="Check-out Date" />
-							                    <span class="input-group-addon">
-							                        <span class="fa fa-calendar"></span>
-							                    </span>
-							                </div>
-							            </div>
-							            <div class="form-group margin-bottom-0">
-							                <select class="form-control" name="guest">
-							            	 	<option value="">-- Guests -- </option>
-							            	 	<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5p">5+</option>
-											</select> 
-							            </div>
-									</div>							
-						            <div class="form-group tm-yellow-gradient-bg text-center">
-						            	<button type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
-						            </div>  
-								</form>
-							</div>
-					    </div>
-					    <div role="tabpanel" class="tab-pane fade tm-white-bg" id="car">
-							<div class="tm-search-box effect2">
-								<form action="#" method="post" class="hotel-search-form">
-									<div class="tm-form-inner">
-										<div class="form-group">
-							            	 <select class="form-control">
-							            	 	<option value="">-- Select Model -- </option>
-							            	 	<option value="shangrila">BMW</option>
-												<option value="chatrium">Mercedes-Benz</option>
-												<option value="fourseasons">Toyota</option>
-												<option value="hilton">Honda</option>
-											</select> 
-							          	</div>
-							          	<div class="form-group">
-							                <div class='input-group date-time' id='datetimepicker3'>
-							                    <input type='text' class="form-control" placeholder="Pickup Date" />
-							                    <span class="input-group-addon">
-							                        <span class="fa fa-calendar"></span>
-							                    </span>
-							                </div>
-							            </div>
-							          	<div class="form-group">
-							                <div class='input-group date-time' id='datetimepicker4'>
-							                    <input type='text' class="form-control" placeholder="Return Date" />
-							                    <span class="input-group-addon">
-							                        <span class="fa fa-calendar"></span>
-							                    </span>
-							                </div>
-							            </div>
-							            <div class="form-group">
-							            	 <select class="form-control">
-							            	 	<option value="">-- Options -- </option>
-							            	 	<option value="">Child Seat</option>
-												<option value="">GPS Navigator</option>
-												<option value="">Insurance</option>
-											</select> 
-							          	</div>							           
-									</div>							
-						            <div class="form-group tm-yellow-gradient-bg text-center">
-						            	<button type="submit" name="submit" class="tm-yellow-btn">Check Now</button>
-						            </div>  
-								</form>
-							</div>
-					    </div>				    
-					</div>
-				</div>								
-			</div>
-			</form>
-
-			<div class="col-lg-4 col-md-4 col-sm-6">
-				<div class="tm-home-box-1 tm-home-box-1-2 tm-home-box-1-center">
-					<img src="img/index-01.jpg" alt="image" class="img-responsive">
-					<a href="#">
-						<div class="tm-green-gradient-bg tm-city-price-container">
-							<span>New York</span>
-							<span>$6,600</span>
-						</div>	
-					</a>			
-				</div>				
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6">
-				<div class="tm-home-box-1 tm-home-box-1-2 tm-home-box-1-right">
-					<img src="img/index-02.jpg" alt="image" class="img-responsive">
-					<a href="#">
-						<div class="tm-red-gradient-bg tm-city-price-container">
-							<span>Paris</span>
-							<span>$4,200</span>
-						</div>	
-					</a>					
-				</div>				
-			</div>
-		</div>
-	</section>		
-	
-	<!-- white bg -->
-	<section class="tm-white-bg section-padding-bottom">
-		<div class="container">
-			<div class="row">
-				<div class="tm-section-header section-margin-top">
-					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
-					<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">List of Rooms</h2></div>
-					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
-				</div>
-				<div class="col-lg-6">
-					<div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-07.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>					
-			     </div>
-			     <div class="col-lg-6">
-			        <div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-08.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>
-				</div>
-				<div class="col-lg-6">
-				    <div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-09.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>
-			    </div>
-			    <div class="col-lg-6">
-			        <div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-10.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>
-			   	</div>
-			</div>	
-			<div class="row">
-				<div class="tm-section-header section-margin-top">
-					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>
-					<div class="col-lg-4 col-md-6 col-sm-6"><h2 class="tm-section-title">All Services</h2></div>
-					<div class="col-lg-4 col-md-3 col-sm-3"><hr></div>	
-				</div>
-				<div class="col-lg-6">
-					<div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-07.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>					
-			     </div>
-			     <div class="col-lg-6">
-			        <div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-08.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>
-				</div>
-				<div class="col-lg-6">
-				    <div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-09.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>
-			    </div>
-			    <div class="col-lg-6">
-			        <div class="tm-home-box-3">
-						<div class="tm-home-box-3-img-container">
-							<img src="img/index-10.jpg" alt="image" class="img-responsive">	
-						</div>						
-						<div class="tm-home-box-3-info">
-							<p class="tm-home-box-3-description">Proin gravida nibhvell velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
-					        <div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description box-3">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-						</div>						
-					</div>
-			   	</div>
-			</div>	
-		</div>
-	</section>
-	<section class="container tm-home-section-1" id="more">
-			<div class="section-margin-top">
-			<div class="row">				
-				<div class="tm-section-header">
-					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>
-					<div class="col-lg-6 col-md-6 col-sm-6"><h2 class="tm-section-title">List of Food</h2></div>
-					<div class="col-lg-3 col-md-3 col-sm-3"><hr></div>	
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2">						
-						<img src="img/index-03.jpg" alt="image" class="img-responsive">
-						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
-						<p class="tm-date">28 March 2016</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2">						
-					    <img src="img/index-04.jpg" alt="image" class="img-responsive">
-						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
-						<p class="tm-date">26 March 2016</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2">						
-					    <img src="img/index-05.jpg" alt="image" class="img-responsive">
-						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
-						<p class="tm-date">24 March 2016</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-					<div class="tm-home-box-2 tm-home-box-2-right">						
-					    <img src="img/index-06.jpg" alt="image" class="img-responsive">
-						<h3>Proin Gravida Nibhvel Lorem Quis Bind</h3>
-						<p class="tm-date">22 March 2016</p>
-						<div class="tm-home-box-2-container">
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-heart tm-home-box-2-icon border-right"></i></a>
-							<a href="#" class="tm-home-box-2-link"><span class="tm-home-box-2-description">Travel</span></a>
-							<a href="#" class="tm-home-box-2-link"><i class="fa fa-edit tm-home-box-2-icon border-left"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<p class="home-description">Hân hạnh được phục vụ quý khách những món ăn ngon nhất.</p>	
-				</div>
-			</div>			
-		</div>
-	</section>	
-
-	<script>
-		// HTML document is loaded. DOM is ready.
-		$(function() {
-
-			$('#hotelCarTabs a').click(function (e) {
-			  e.preventDefault()
-			  $(this).tab('show')
-			})
-
-        	$('.date').datetimepicker({
-            	format: 'MM/DD/YYYY'
-            });
-            $('.date-time').datetimepicker();
-
-			// https://css-tricks.com/snippets/jquery/smooth-scrolling/
-		  	$('a[href*=#]:not([href=#])').click(function() {
-			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			      var target = $(this.hash);
-			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			      if (target.length) {
-			        $('html,body').animate({
-			          scrollTop: target.offset().top
-			        }, 1000);
-			        return false;
-			      }
-			    }
-		  	});
-		});
-		
-		// Load Flexslider when everything is loaded.
-		$(window).load(function() {	  		
-			// Vimeo API nonsense
-
-/*
-			  var player = document.getElementById('player_1');
-			  $f(player).addEvent('ready', ready);
-			 
-			  function addEvent(element, eventName, callback) {
-			    if (element.addEventListener) {
-			      element.addEventListener(eventName, callback, false)
-			    } else {
-			      element.attachEvent(eventName, callback, false);
-			    }
-			  }
-			 
-			  function ready(player_id) {
-			    var froogaloop = $f(player_id);
-			    froogaloop.addEvent('play', function(data) {
-			      $('.flexslider').flexslider("pause");
-			    });
-			    froogaloop.addEvent('pause', function(data) {
-			      $('.flexslider').flexslider("play");
-			    });
-			  }
-*/
-
-			 
-			 
-			  // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
-/*
-
-			  $(".flexslider")
-			    .fitVids()
-			    .flexslider({
-			      animation: "slide",
-			      useCSS: false,
-			      animationLoop: false,
-			      smoothHeight: true,
-			      controlNav: false,
-			      before: function(slider){
-			        $f(player).api('pause');
-			      }
-			  });
-*/
+<!-- banner -->
+<div class="banner">    	   
+    <img src="images/photos/banner.jpg"  class="img-responsive" alt="slide">
+    <div class="welcome-message">
+        <div class="wrap-info">
+            <div class="information">
+                <h1  class="animated fadeInDown">Best hotel in Dubai</h1>
+                <p class="animated fadeInUp">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
+            </div>
+            <a href="#information" class="arrow-nav scroll wowload fadeInDownBig"><i class="fa fa-angle-down"></i></a>
+        </div>
+    </div>
+</div>
+<!-- banner-->
 
 
-			  
+<!-- reservation-information -->
+<div id="information" class="spacer reserve-info ">
+<div class="container">
+<div class="row">
+<div class="col-sm-7 col-md-8">
+    <div class="embed-responsive embed-responsive-16by9 wowload fadeInLeft"><iframe  class="embed-responsive-item" src="//player.vimeo.com/video/55057393?title=0" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+</div>
+<div class="col-sm-5 col-md-4">
+<h3>Check Available Rooms</h3>
+    <form role="form" class="wowload fadeInRight" action="{!! ('availablerooms') !!}" method="get">
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' name= "checkin" class="form-control" placeholder="Check-in Date"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' name= "checkout" class="form-control" placeholder="Check-out Date"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
 
-//	For images only
-		    $('.flexslider').flexslider({
-			    controlNav: false
-		    });
+            </div>
+        </div>        
+        <button type ="submit" name="submit" class="btn btn-default">Check Available</button>
+    </form>    
+</div>
+</div>  
+</div>
+</div>
+<!-- reservation-information -->
 
 
-	  	});
-	</script>
 
+<!-- services -->
+<div class="spacer services wowload fadeInUp">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- RoomCarousel -->
+            <div id="RoomCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="item active"><img src="images/photos/8.jpg" class="img-responsive" alt="slide"></div>                
+                <div class="item  height-full"><img src="images/photos/9.jpg"  class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="images/photos/10.jpg"  class="img-responsive" alt="slide"></div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#RoomCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#RoomCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- RoomCarousel-->
+            <div class="caption">Rooms<a href="rooms-tariff.php" class="pull-right"><i class="fa fa-edit"></i></a></div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <!-- RoomCarousel -->
+            <div id="TourCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="item active"><img src="images/photos/6.jpg" class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="images/photos/3.jpg"  class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="images/photos/4.jpg"  class="img-responsive" alt="slide"></div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#TourCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#TourCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- RoomCarousel-->
+            <div class="caption">Tour Packages<a href="gallery.php" class="pull-right"><i class="fa fa-edit"></i></a></div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <!-- RoomCarousel -->
+            <div id="FoodCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="item active"><img src="images/photos/1.jpg" class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="images/photos/2.jpg"  class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="images/photos/5.jpg"  class="img-responsive" alt="slide"></div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#FoodCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#FoodCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- RoomCarousel-->
+            <div class="caption">Food and Drinks<a href="gallery.php" class="pull-right"><i class="fa fa-edit"></i></a></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- services -->
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+    });
+
+    $( "#datetimepicker1" ).click(function() {
+        console.log(123);
+      $('#datetimepicker1').datetimepicker();
+    });
+</script>
 @stop

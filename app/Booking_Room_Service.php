@@ -18,4 +18,5 @@ class Boongking_Room_Service extends Model
 	{
 		return $this->belongsTo('App\Service');
 	}
+
 }

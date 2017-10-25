@@ -22,8 +22,13 @@ Route::get('/admin', function(){
 });
 
 //Route Booking
-Route::get('/available/rooms/{room}','BookingController@getRooms');
+Route::get('/available/rooms/{room}','BookingController@showRoom');
 Route::get('/availablerooms','BookingController@searchRooms');
+Route::get('/cart/{room}/add','BookingController@add');
+Route::get('/cart/{rowId}/delete', 'BookingController@delete');
+Route::get('/cart/checkout', 'BookingController@checkout');
+Route::post('/cart/checkout', 'BookingController@payment');
+
 
 //Route Room
 Route::get('/search', function(){
@@ -34,6 +39,18 @@ Route::get('/allrooms', 'RoomController@getRooms');
 Route::get('/rooms/{room}', 'RoomController@showRoom');
 Route::get('/searchresult','RoomController@searchRooms');
 
+//Route ShopingCart
+//load gio hang
+Route::get('/shop', 'ProductController@index');
+// add gio hang
+Route::get('/carts/{id}/add', 'CartController@add');
+// xoa toan bo gio hang
+Route::get('/carts/destroy', 'CartController@destroy');
+// checkout tinh toan gio hang
+Route::get('/checkout', 'CartController@checkout');
+// xoa 1 phan tu trong gio hang
+Route::get('/carts/{rowId}/delete', 'CartController@delete');
+Route::get('/loadCarts', 'CartController@loadCarts');
 
 //Route Promotion
 Route::get('admin/promotion', 'PromotionController@home');
@@ -62,10 +79,3 @@ Route::put('admin/services/{service}', 'ServiceController@update')->name('admin.
 Route::get('admin/managerbooking', 'BookingmanagerController@home');
 Route::get('admin/managerbooking/index', 'BookingmanagerController@getBooking')->name('admin.managerbooking.index');
 Route::get('admin/managerbooking/{id}', 'BookingmanagerController@show')->name('admin.managerbooking.show');
-
-Route::get('/admin', 'PageController@getAdmin')->name('admin');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('admin/search','RoomController@searchDate');

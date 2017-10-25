@@ -14,7 +14,7 @@ class RemoveCancelledDayOnBookingsTable extends Migration
     public function up()
     {
         Schema::table('bookings', function (Blueprint $table) {
-            //
+            dropColumn('cancelled_day');
         });
     }
 

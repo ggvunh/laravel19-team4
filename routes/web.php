@@ -79,3 +79,10 @@ Route::put('admin/services/{service}', 'ServiceController@update')->name('admin.
 Route::get('admin/managerbooking', 'BookingmanagerController@home');
 Route::get('admin/managerbooking/index', 'BookingmanagerController@getBooking')->name('admin.managerbooking.index');
 Route::get('admin/managerbooking/{id}', 'BookingmanagerController@show')->name('admin.managerbooking.show');
+
+Route::get('/admin', 'PageController@getAdmin')->name('admin');		
+Auth::routes();		
+		
+Route::get('/home', 'HomeController@index')->name('home');		
+		
+Route::get('admin/search','RoomController@searchDate');

@@ -21,6 +21,10 @@ Route::get('/admin', function(){
 	return view('admin.index');
 });
 
+Route::get('/dsa', function(){
+	return view('dsa');
+});
+
 //Route Booking
 Route::get('/available/rooms/{room}','BookingController@showRoom');
 Route::get('/availablerooms','BookingController@searchRooms');

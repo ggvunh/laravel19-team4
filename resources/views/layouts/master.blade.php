@@ -3,34 +3,27 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Holiday Crown | Best hotel in Dubai</title>
-
+	<title>Holiday Crown</title>
+    
+    <link href="{{asset('assets/bootstrap.min.css')}}" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800|Old+Standard+TT' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-    
+    <link href="{{asset('assets/bootstrap-datepicker.min.css')}}" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="{{asset('assets/uniform/css/uniform.default.min.css')}}" />
 	<link rel="stylesheet" href="{{asset('assets/wow/animate.css')}}" />
 	<link rel="stylesheet" href="{{asset('assets/gallery/blueimp-gallery.min.css')}}">
 	<link rel="shortcut icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">
 	<link rel="icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">
 	<link rel="stylesheet" href="{{asset('assets/style.css')}}">
-    <link href="{{asset('assets/bootstrap-datetimepicker.min.css')}}" rel="stylesheet">
-
-
 
 	<!-- boostrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{asset('assets/jquery-3.2.1.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('assets/moment.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/moment.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/bootstrap-datepicker.min.js')}}"></script>
 
     <script type="text/javascript" src="{{asset('assets/wow/wow.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/uniform/js/jquery.uniform.js')}}"></script>
@@ -40,7 +33,7 @@
 	<script type="text/javascript" src="{{asset('assets/script.js')}}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
-    <script type="text/javascript" src="{{asset('assets/bootstrap-datetimepicker.min.js')}}"></script>
+
 
     
 </head>

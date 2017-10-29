@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-
+<br><br>
 <div class="container">
 <div class="row">
 @foreach($rooms as $room)

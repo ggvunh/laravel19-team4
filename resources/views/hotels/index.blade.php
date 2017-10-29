@@ -28,25 +28,34 @@
 <h3>Check Available Rooms</h3>
     <form role="form" class="wowload fadeInRight" action="{!! ('availablerooms') !!}" method="get">
         <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
+                    <input type='text' name= "checkin" class="form-control" placeholder="Check-in Date"/>
                     <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
+                        <span class="fa fa-calendar"></span>
                     </span>
                 </div>
-            <script type="text/javascript">
+        <script>
             $(function () {
-                $('#datetimepicker1').datetimepicker();
+                $('#datetimepicker1').datepicker({
+                autoclose: true
+                });
             });
         </script>
         <div class="form-group">
             <div class='input-group date' id='datetimepicker2'>
                     <input type='text' name= "checkout" class="form-control" placeholder="Check-out Date"/>
                     <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
+                        <span class="fa fa-calendar"></span>
                     </span>
-
             </div>
-        </div>        
+        </div> 
+        <script>
+            $(function () {
+                $('#datetimepicker2').datepicker({
+                autoclose: true
+                });
+            });
+        </script>
+
         <button type ="submit" name="submit" class="btn btn-default">Check Available</button>
     </form>    
 </div>

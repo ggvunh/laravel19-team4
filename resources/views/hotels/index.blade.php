@@ -27,14 +27,17 @@
 <div class="col-sm-5 col-md-4">
 <h3>Check Available Rooms</h3>
     <form role="form" class="wowload fadeInRight" action="{!! ('availablerooms') !!}" method="get">
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' name= "checkin" class="form-control" placeholder="Check-in Date"/>
+        <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-            </div>
-        </div>
+                </div>
+            <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
         <div class="form-group">
             <div class='input-group date' id='datetimepicker2'>
                     <input type='text' name= "checkout" class="form-control" placeholder="Check-out Date"/>
@@ -111,15 +114,4 @@
 </div>
 </div>
 <!-- services -->
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker();
-        $('#datetimepicker2').datetimepicker();
-    });
-
-    $( "#datetimepicker1" ).click(function() {
-        console.log(123);
-      $('#datetimepicker1').datetimepicker();
-    });
-</script>
 @stop
